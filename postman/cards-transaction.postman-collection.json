@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "Cards Transactions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:8081" }],
+  "item": [
+    {
+      "name": "1. Create Transaction (POST)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"refId\": \"TXN0001\",\n  \"merchantName\": \"Tesco\",\n  \"amount\": 120.50,\n  \"currency\": \"MYR\",\n  \"status\": \"SUCCESS\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/transactions", "host": ["{{baseUrl}}"], "path": ["api", "transactions"] }
+      }
+    },
+    {
+      "name": "2. Get Transaction by refId (GET)",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/api/transactions/TXN0001", "host": ["{{baseUrl}}"], "path": ["api", "transactions", "TXN0001"] }
+      }
+    },
+    {
+      "name": "3. List Transactions - Page 0 (GET, paginated)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/transactions?page=0",
+          "host": ["{{baseUrl}}"], "path": ["api", "transactions"],
+          "query": [{ "key": "page", "value": "0" }]
+        }
+      }
+    },
+    {
+      "name": "4. Update Transaction (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"merchantName\": \"Tesco Extra\",\n  \"amount\": 150.00,\n  \"currency\": \"MYR\",\n  \"status\": \"SUCCESS\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/transactions/TXN0001", "host": ["{{baseUrl}}"], "path": ["api", "transactions", "TXN0001"] }
+      }
+    },
+    {
+      "name": "5. Convert Currency (GET, calls 3rd party)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/transactions/TXN0001/convert?to=USD",
+          "host": ["{{baseUrl}}"], "path": ["api", "transactions", "TXN0001", "convert"],
+          "query": [{ "key": "to", "value": "USD" }]
+        }
+      }
+    }
+  ]
+}
