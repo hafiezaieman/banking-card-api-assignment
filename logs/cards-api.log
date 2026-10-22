@@ -1,0 +1,362 @@
+2026-10-22 11:52:47.019 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:52:47.019 INFO  - RESPONSE | POST /api/transactions | status=201 | 845ms | body={"amount":120.50,"createdAt":"2026-10-22T11:52:46.9239547","currency":"MYR","merchantName":"Tesco","refId":"TXN0001","status":"SUCCESS"}
+2026-10-22 11:52:58.966 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:52:58.966 INFO  - RESPONSE | POST /api/transactions | status=409 | 27ms | body={"timestamp":"2026-10-22T11:52:58.957690900","status":409,"error":"Conflict","message":"refId already exists: TXN0001"}
+2026-10-22 11:53:11.409 INFO  - REQUEST  | GET /api/transactions/TXN0001 | body=
+2026-10-22 11:53:11.409 INFO  - RESPONSE | GET /api/transactions/TXN0001 | status=200 | 34ms | body={"amount":120.50,"createdAt":"2026-10-22T11:52:46.9239547","currency":"MYR","merchantName":"Tesco","refId":"TXN0001","status":"SUCCESS"}
+2026-10-22 11:53:21.864 INFO  - REQUEST  | GET /api/transactions/NOPE | body=
+2026-10-22 11:53:21.864 INFO  - RESPONSE | GET /api/transactions/NOPE | status=404 | 11ms | body={"timestamp":"2026-10-22T11:53:21.863200300","status":404,"error":"Not Found","message":"Transaction not found: NOPE"}
+2026-10-22 11:53:34.412 INFO  - REQUEST  | PUT /api/transactions/TXN0001 | body={
+  "merchantName": "Tesco Extra",
+  "amount": 150.00,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:53:34.412 INFO  - RESPONSE | PUT /api/transactions/TXN0001 | status=200 | 28ms | body={"amount":150.00,"createdAt":"2026-10-22T11:52:46.9239547","currency":"MYR","merchantName":"Tesco Extra","refId":"TXN0001","status":"SUCCESS"}
+2026-10-22 11:53:50.760 INFO  - REQUEST  | GET /api/transactions/TXN0001 | body=
+2026-10-22 11:53:50.760 INFO  - RESPONSE | GET /api/transactions/TXN0001 | status=200 | 10ms | body={"amount":150.00,"createdAt":"2026-10-22T11:52:46.9239547","currency":"MYR","merchantName":"Tesco Extra","refId":"TXN0001","status":"SUCCESS"}
+2026-10-22 11:54:57.903 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:54:57.903 INFO  - RESPONSE | POST /api/transactions | status=409 | 25ms | body={"timestamp":"2026-10-22T11:54:57.903093800","status":409,"error":"Conflict","message":"refId already exists: TXN0001"}
+2026-10-22 11:55:16.351 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:55:16.351 INFO  - RESPONSE | POST /api/transactions | status=409 | 6ms | body={"timestamp":"2026-10-22T11:55:16.350887300","status":409,"error":"Conflict","message":"refId already exists: TXN0001"}
+2026-10-22 11:56:12.402 INFO  - REQUEST  | GET /api/transactions?page=0 | body=
+2026-10-22 11:56:12.402 INFO  - RESPONSE | GET /api/transactions | status=200 | 47ms | body={"content":[{"amount":150.00,"createdAt":"2026-10-22T11:52:46.9239547","currency":"MYR","merchantName":"Tesco Extra","refId":"TXN0001","status":"SUCCESS"}],"page":0,"size":10,"totalElements":1,"totalPages":1}
+2026-10-22 11:57:00.480 INFO  - REQUEST  | GET /api/transactions/TXN0002 | body=
+2026-10-22 11:57:00.480 INFO  - RESPONSE | GET /api/transactions/TXN0002 | status=404 | 6ms | body={"timestamp":"2026-10-22T11:57:00.479313500","status":404,"error":"Not Found","message":"Transaction not found: TXN0002"}
+2026-10-22 11:57:23.470 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:57:23.470 INFO  - RESPONSE | POST /api/transactions | status=409 | 14ms | body={"timestamp":"2026-10-22T11:57:23.469015800","status":409,"error":"Conflict","message":"refId already exists: TXN0001"}
+2026-10-22 11:59:02.406 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:59:02.406 INFO  - RESPONSE | POST /api/transactions | status=409 | 10ms | body={"timestamp":"2026-10-22T11:59:02.405373900","status":409,"error":"Conflict","message":"refId already exists: TXN0001"}
+2026-10-22 11:59:33.651 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:59:33.651 INFO  - RESPONSE | POST /api/transactions | status=409 | 10ms | body={"timestamp":"2026-10-22T11:59:33.650442600","status":409,"error":"Conflict","message":"refId already exists: TXN0001"}
+2026-10-22 11:59:49.267 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": "Tesco",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 11:59:49.267 INFO  - RESPONSE | POST /api/transactions | status=409 | 12ms | body={"timestamp":"2026-10-22T11:59:49.266656500","status":409,"error":"Conflict","message":"refId already exists: TXN0001"}
+2026-10-22 12:03:28.428 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0001",
+  "merchantName": ,
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 12:03:28.428 INFO  - RESPONSE | POST /api/transactions | status=500 | 3ms | body={"timestamp":"2026-10-22T12:03:28.427863200","status":500,"error":"Internal Server Error","message":"Unexpected error occurred"}
+2026-10-22 12:04:22.138 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0002",
+  "merchantName": "Tesco mart",
+  "amount": -5,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 12:04:22.138 INFO  - RESPONSE | POST /api/transactions | status=400 | 49ms | body={"timestamp":"2026-10-22T12:04:22.137174200","status":400,"error":"Bad Request","message":"amount: must be greater than or equal to 0.01"}
+2026-10-22 12:04:36.610 INFO  - REQUEST  | POST /api/transactions | body={
+  "refId": "TXN0002",
+  "merchantName": "Tesco mart",
+  "amount": 120.50,
+  "currency": "MYR",
+  "status": "SUCCESS"
+}
+2026-10-22 12:04:36.610 INFO  - RESPONSE | POST /api/transactions | status=201 | 27ms | body={"amount":120.50,"createdAt":"2026-10-22T12:04:36.604121","currency":"MYR","merchantName":"Tesco mart","refId":"TXN0002","status":"SUCCESS"}
+2026-10-22 12:04:51.371 INFO  - REQUEST  | GET /api/transactions/TXN0002 | body=
+2026-10-22 12:04:51.372 INFO  - RESPONSE | GET /api/transactions/TXN0002 | status=200 | 7ms | body={"amount":120.50,"createdAt":"2026-10-22T12:04:36.604121","currency":"MYR","merchantName":"Tesco mart","refId":"TXN0002","status":"SUCCESS"}
+2026-10-22 12:05:11.439 INFO  - REQUEST  | GET /api/transactions/TXN0001/convert?to=USD | body=
+2026-10-22 12:05:11.439 INFO  - RESPONSE | GET /api/transactions/TXN0001/convert | status=200 | 297ms | body={"convertedAmount":36.76,"exchangeRate":0.245058,"merchantName":"Tesco Extra","originalAmount":150.00,"originalCurrency":"MYR","rateSource":"open.er-api.com","refId":"TXN0001","targetCurrency":"USD"}
+2026-10-22 12:05:29.442 INFO  - REQUEST  | GET /api/transactions/TXN0001/convert?to=SGD | body=
+2026-10-22 12:05:29.443 INFO  - RESPONSE | GET /api/transactions/TXN0001/convert | status=200 | 82ms | body={"convertedAmount":46.95,"exchangeRate":0.313022,"merchantName":"Tesco Extra","originalAmount":150.00,"originalCurrency":"MYR","rateSource":"open.er-api.com","refId":"TXN0001","targetCurrency":"SGD"}
+2026-10-22 12:06:42.699 INFO  - REQUEST  | GET /api/transactions/TXN0001 | body=
+2026-10-22 12:06:42.699 INFO  - RESPONSE | GET /api/transactions/TXN0001 | status=200 | 13ms | body={"amount":150.00,"createdAt":"2026-10-22T11:52:46.9239547","currency":"MYR","merchantName":"Tesco Extra","refId":"TXN0001","status":"SUCCESS"}
+2026-10-22 12:07:15.749 INFO  - REQUEST  | GET /api/transactions/TXN0001/convert?to=x | body=
+2026-10-22 12:07:15.750 INFO  - RESPONSE | GET /api/transactions/TXN0001/convert | status=400 | 85ms | body={"timestamp":"2026-10-22T12:07:15.748890500","status":400,"error":"Bad Request","message":"Unsupported target currency: X"}
+2026-10-22 12:07:23.743 INFO  - REQUEST  | GET /api/transactions/TXN0001/convert?to=sgd | body=
+2026-10-22 12:07:23.744 INFO  - RESPONSE | GET /api/transactions/TXN0001/convert | status=200 | 64ms | body={"convertedAmount":46.95,"exchangeRate":0.313022,"merchantName":"Tesco Extra","originalAmount":150.00,"originalCurrency":"MYR","rateSource":"open.er-api.com","refId":"TXN0001","targetCurrency":"SGD"}
+2026-10-22 12:09:28.678 INFO  - REQUEST  | GET /api/transactions/TXN0002 | body=
+2026-10-22 12:09:28.678 INFO  - RESPONSE | GET /api/transactions/TXN0002 | status=200 | 24ms | body={"amount":120.50,"createdAt":"2026-10-22T12:04:36.604121","currency":"MYR","merchantName":"Tesco mart","refId":"TXN0002","status":"SUCCESS"}
+2026-10-22 12:18:16.405 INFO  - REQUEST  | POST /api/transactions | body=[
+  {
+    "refId": "TXN0003",
+    "merchantName": "Lotus's Malaysia",
+    "amount": 85.40,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0004",
+    "merchantName": "99 Speedmart",
+    "amount": 24.10,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0005",
+    "merchantName": "GrabFood",
+    "amount": 38.50,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0006",
+    "merchantName": "ZUS Coffee",
+    "amount": 14.90,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0007",
+    "merchantName": "Watsons",
+    "amount": 62.30,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0008",
+    "merchantName": "Shell Petrol",
+    "amount": 95.00,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0009",
+    "merchantName": "Jaya Grocer",
+    "amount": 154.75,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0010",
+    "merchantName": "Shopee Malaysia",
+    "amount": 110.00,
+    "currency": "MYR",
+    "status": "PENDING"
+  },
+  {
+    "refId": "TXN0011",
+    "merchantName": "Tealive",
+    "amount": 12.50,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0012",
+    "merchantName": "AEON Mall",
+    "amount": 215.80,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+]
+2026-10-22 12:18:16.405 INFO  - RESPONSE | POST /api/transactions | status=500 | 6ms | body={"timestamp":"2026-10-22T12:18:16.403820300","status":500,"error":"Internal Server Error","message":"Unexpected error occurred"}
+2026-10-22 12:18:26.455 INFO  - REQUEST  | POST /api/transactions | body=
+  {
+    "refId": "TXN0003",
+    "merchantName": "Lotus's Malaysia",
+    "amount": 85.40,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0004",
+    "merchantName": "99 Speedmart",
+    "amount": 24.10,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0005",
+    "merchantName": "GrabFood",
+    "amount": 38.50,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0006",
+    "merchantName": "ZUS Coffee",
+    "amount": 14.90,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0007",
+    "merchantName": "Watsons",
+    "amount": 62.30,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0008",
+    "merchantName": "Shell Petrol",
+    "amount": 95.00,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0009",
+    "merchantName": "Jaya Grocer",
+    "amount": 154.75,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0010",
+    "merchantName": "Shopee Malaysia",
+    "amount": 110.00,
+    "currency": "MYR",
+    "status": "PENDING"
+  },
+  {
+    "refId": "TXN0011",
+    "merchantName": "Tealive",
+    "amount": 12.50,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+  {
+    "refId": "TXN0012",
+    "merchantName": "AEON Mall",
+    "amount": 215.80,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+
+2026-10-22 12:18:26.455 INFO  - RESPONSE | POST /api/transactions | status=500 | 2ms | body={"timestamp":"2026-10-22T12:18:26.455013900","status":500,"error":"Internal Server Error","message":"Unexpected error occurred"}
+2026-10-22 12:18:54.793 INFO  - REQUEST  | POST /api/transactions | body=
+{
+    "refId": "TXN0003",
+    "merchantName": "Lotus's Malaysia",
+    "amount": 85.40,
+    "currency": "MYR",
+    "status": "SUCCESS"
+ }
+2026-10-22 12:18:54.795 INFO  - RESPONSE | POST /api/transactions | status=201 | 22ms | body={"amount":85.40,"createdAt":"2026-10-22T12:18:54.782753","currency":"MYR","merchantName":"Lotus's Malaysia","refId":"TXN0003","status":"SUCCESS"}
+2026-10-22 12:19:19.419 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0004",
+    "merchantName": "99 Speedmart",
+    "amount": 24.10,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  },
+2026-10-22 12:19:19.420 INFO  - RESPONSE | POST /api/transactions | status=500 | 1ms | body={"timestamp":"2026-10-22T12:19:19.419536500","status":500,"error":"Internal Server Error","message":"Unexpected error occurred"}
+2026-10-22 12:19:26.265 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0004",
+    "merchantName": "99 Speedmart",
+    "amount": 24.10,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:19:26.265 INFO  - RESPONSE | POST /api/transactions | status=201 | 10ms | body={"amount":24.10,"createdAt":"2026-10-22T12:19:26.2617956","currency":"MYR","merchantName":"99 Speedmart","refId":"TXN0004","status":"SUCCESS"}
+2026-10-22 12:19:35.202 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0005",
+    "merchantName": "GrabFood",
+    "amount": 38.50,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:19:35.203 INFO  - RESPONSE | POST /api/transactions | status=201 | 6ms | body={"amount":38.50,"createdAt":"2026-10-22T12:19:35.2004835","currency":"MYR","merchantName":"GrabFood","refId":"TXN0005","status":"SUCCESS"}
+2026-10-22 12:19:41.276 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0006",
+    "merchantName": "ZUS Coffee",
+    "amount": 14.90,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:19:41.276 INFO  - RESPONSE | POST /api/transactions | status=201 | 13ms | body={"amount":14.90,"createdAt":"2026-10-22T12:19:41.2688075","currency":"MYR","merchantName":"ZUS Coffee","refId":"TXN0006","status":"SUCCESS"}
+2026-10-22 12:19:47.417 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0007",
+    "merchantName": "Watsons",
+    "amount": 62.30,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:19:47.417 INFO  - RESPONSE | POST /api/transactions | status=201 | 9ms | body={"amount":62.30,"createdAt":"2026-10-22T12:19:47.4124168","currency":"MYR","merchantName":"Watsons","refId":"TXN0007","status":"SUCCESS"}
+2026-10-22 12:19:52.705 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0008",
+    "merchantName": "Shell Petrol",
+    "amount": 95.00,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:19:52.705 INFO  - RESPONSE | POST /api/transactions | status=201 | 10ms | body={"amount":95.00,"createdAt":"2026-10-22T12:19:52.7001532","currency":"MYR","merchantName":"Shell Petrol","refId":"TXN0008","status":"SUCCESS"}
+2026-10-22 12:19:59.289 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0009",
+    "merchantName": "Jaya Grocer",
+    "amount": 154.75,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:19:59.290 INFO  - RESPONSE | POST /api/transactions | status=201 | 12ms | body={"amount":154.75,"createdAt":"2026-10-22T12:19:59.2867779","currency":"MYR","merchantName":"Jaya Grocer","refId":"TXN0009","status":"SUCCESS"}
+2026-10-22 12:20:05.885 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0010",
+    "merchantName": "Shopee Malaysia",
+    "amount": 110.00,
+    "currency": "MYR",
+    "status": "PENDING"
+  }
+2026-10-22 12:20:05.886 INFO  - RESPONSE | POST /api/transactions | status=201 | 8ms | body={"amount":110.00,"createdAt":"2026-10-22T12:20:05.8808284","currency":"MYR","merchantName":"Shopee Malaysia","refId":"TXN0010","status":"PENDING"}
+2026-10-22 12:20:11.795 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0011",
+    "merchantName": "Tealive",
+    "amount": 12.50,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:20:11.796 INFO  - RESPONSE | POST /api/transactions | status=201 | 5ms | body={"amount":12.50,"createdAt":"2026-10-22T12:20:11.7933202","currency":"MYR","merchantName":"Tealive","refId":"TXN0011","status":"SUCCESS"}
+2026-10-22 12:20:16.901 INFO  - REQUEST  | POST /api/transactions | body={
+    "refId": "TXN0012",
+    "merchantName": "AEON Mall",
+    "amount": 215.80,
+    "currency": "MYR",
+    "status": "SUCCESS"
+  }
+2026-10-22 12:20:16.901 INFO  - RESPONSE | POST /api/transactions | status=201 | 10ms | body={"amount":215.80,"createdAt":"2026-10-22T12:20:16.8951091","currency":"MYR","merchantName":"AEON Mall","refId":"TXN0012","status":"SUCCESS"}
+2026-10-22 12:20:27.804 INFO  - REQUEST  | GET /api/transactions/TXN0003 | body=
+2026-10-22 12:20:27.804 INFO  - RESPONSE | GET /api/transactions/TXN0003 | status=200 | 11ms | body={"amount":85.40,"createdAt":"2026-10-22T12:18:54.782753","currency":"MYR","merchantName":"Lotus's Malaysia","refId":"TXN0003","status":"SUCCESS"}
+2026-10-22 12:20:31.741 INFO  - REQUEST  | GET /api/transactions/TXN0005 | body=
+2026-10-22 12:20:31.741 INFO  - RESPONSE | GET /api/transactions/TXN0005 | status=200 | 4ms | body={"amount":38.50,"createdAt":"2026-10-22T12:19:35.2004835","currency":"MYR","merchantName":"GrabFood","refId":"TXN0005","status":"SUCCESS"}
+2026-10-22 12:20:40.392 INFO  - REQUEST  | GET /api/transactions?page=0 | body=
+2026-10-22 12:20:40.392 INFO  - RESPONSE | GET /api/transactions | status=200 | 19ms | body={"content":[{"amount":215.80,"createdAt":"2026-10-22T12:20:16.8951091","currency":"MYR","merchantName":"AEON Mall","refId":"TXN0012","status":"SUCCESS"},{"amount":12.50,"createdAt":"2026-10-22T12:20:11.7933202","currency":"MYR","merchantName":"Tealive","refId":"TXN0011","status":"SUCCESS"},{"amount":110.00,"createdAt":"2026-10-22T12:20:05.8808284","currency":"MYR","merchantName":"Shopee Malaysia","refId":"TXN0010","status":"PENDING"},{"amount":154.75,"createdAt":"2026-10-22T12:19:59.2867779","currency":"MYR","merchantName":"Jaya Grocer","refId":"TXN0009","status":"SUCCESS"},{"amount":95.00,"createdAt":"2026-10-22T12:19:52.7001532","currency":"MYR","merchantName":"Shell Petrol","refId":"TXN0008","status":"SUCCESS"},{"amount":62.30,"createdAt":"2026-10-22T12:19:47.4124168","currency":"MYR","merchantName":"Watsons","refId":"TXN0007","status":"SUCCESS"},{"amount":14.90,"createdAt":"2026-10-22T12:19:41.2688075","currency":"MYR","merchantName":"ZUS Coffee","refId":"TXN0006","status":"SUCCESS"},{"amount":38.50,"createdAt":"2026-10-22T12:19:35.2004835","currency":"MYR","merchantName":"GrabFood","refId":"TXN0005","status":"SUCCESS"},{"amount":24.10,"createdAt":"2026-10-22T12:19:26.2617956","currency":"MYR","merchantName":"99 Speedmart","refId":"TXN0004","status":"SUCCESS"},{"amount":85.40,"createdAt":"2026-10-22T12:18:54.782753","currency":"MYR","merchantName":"Lotus's Malaysia","refId":"TXN0003","status":"SUCCESS"}],"page":0,"size":10,"totalElements":12,"totalPages":2}
+2026-10-22 12:20:48.219 INFO  - REQUEST  | GET /api/transactions?page=1 | body=
+2026-10-22 12:20:48.219 INFO  - RESPONSE | GET /api/transactions | status=200 | 10ms | body={"content":[{"amount":120.50,"createdAt":"2026-10-22T12:04:36.604121","currency":"MYR","merchantName":"Tesco mart","refId":"TXN0002","status":"SUCCESS"},{"amount":150.00,"createdAt":"2026-10-22T11:52:46.9239547","currency":"MYR","merchantName":"Tesco Extra","refId":"TXN0001","status":"SUCCESS"}],"page":1,"size":10,"totalElements":12,"totalPages":2}
