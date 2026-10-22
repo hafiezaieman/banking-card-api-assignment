@@ -11,7 +11,6 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 
-// CommandLineRunner = Spring runs this automatically once, right after the app has started
 @Component
 public class DatabaseConnectionChecker implements CommandLineRunner {
 
