@@ -14,27 +14,27 @@ public class CardTransaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;                       // internal database key
+    private Long id;                       
 
     @Column(name = "ref_id", nullable = false, unique = true, length = 50)
-    private String refId;                  // business reference used by clients
+    private String refId;                  
 
     @Column(name = "merchant_name", nullable = false, length = 100)
     private String merchantName;
 
     @Column(nullable = false, precision = 15, scale = 2)
-    private BigDecimal amount;             // BigDecimal for money, never double
+    private BigDecimal amount;             
 
     @Column(nullable = false, length = 3)
-    private String currency;               // e.g. MYR, USD
+    private String currency;               
 
     @Column(nullable = false, length = 20)
-    private String status;                 // e.g. PENDING, SUCCESS, FAILED
+    private String status;                 
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @PrePersist                            // runs automatically before the first INSERT
+    @PrePersist                            
     void onCreate() {
         this.createdAt = LocalDateTime.now();
     }
